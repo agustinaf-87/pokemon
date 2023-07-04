@@ -1,0 +1,128 @@
+* {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+}
+
+.gallery-wrapper {
+  display: flex;
+  position: relative;
+}
+
+.carousel-body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 5em;
+}
+
+.gallery-wrapper {
+  width: 475px;
+  display: flex;
+  position: relative;
+}
+
+.gallery {
+  list-style: none;
+  display: flex;
+  transition: all 0.5s;
+  transform: translatex(-40%);
+  background: #525252;
+}
+
+// .gallery-item {
+//   display: flex;
+//   flex-direction: column;
+//   background: #525252;
+//   border-right: 3px solid black;
+//   flex: 1 1 auto;
+
+//   &__pokemon {
+//     height: 30vh;
+//     display: block;
+//     align-items: stretch;
+//   }
+
+//   &__main-info {
+//     height: 20vh;
+//     background: #232323;
+//     padding: 1em;
+//   }
+
+//   &__name {
+//     color: white;
+//     font-size: 1.5em;
+//   }
+
+//   &__id {
+//     color: white;
+//     font-size: 1em;
+//   }
+
+//   &__type {
+//     padding: 5px;
+//     color: white;
+//     font-size: 1em;
+//   }
+
+//   &__ability {
+//     padding: 5px;
+//     color: white;
+//     font-size: 1em;
+//   }
+
+//   &__prev {
+//     position: absolute;
+//     left: 0px;
+//     top: 50%;
+//     transform: translatey(-50%);
+//     z-index: 10;
+//     cursor: pointer;
+//   }
+
+//   &__next {
+//     position: absolute;
+//     top: 50%;
+//     right: 0px;
+//     transform: translatey(-50%);
+//     z-index: 10;
+//     cursor: pointer;
+//   }
+// }
+
+// .name-id {
+//   display: flex;
+//   justify-content: space-between;
+//   align-items: flex-start;
+//   padding: 0.8em 0;
+// }
+
+// .type {
+//   display: flex;
+//   justify-content: space-between;
+// }
+
+// .ability {
+//   display: flex;
+//   justify-content: space-between;
+// }
+
+.gallery-item {
+  &__prev {
+      position: absolute;
+      left: 0px;
+      top: 50%;
+      transform: translatey(-50%);
+      z-index: 10;
+      cursor: pointer;
+    }
+  
+    &__next {
+      position: absolute;
+      top: 50%;
+      right: 0px;
+      transform: translatey(-50%);
+      z-index: 10;
+      cursor: pointer;
+    }
+  }

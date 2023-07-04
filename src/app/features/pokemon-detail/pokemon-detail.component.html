@@ -1,0 +1,57 @@
+<div *ngIf="pokemon$ | async as pokemon">
+  <h2>{{ pokemon.name | titlecase }}</h2>
+
+  <img [src]="pokemon?.id | pokeImage" />
+
+  <a routerLink="/pokedex">Return to Pokemon list</a>
+
+  <p
+    *ngFor="
+      let flavorText of pokemon?.pokemon_v2_pokemonspecy
+        ?.pokemon_v2_pokemonspeciesflavortexts
+    "
+  >
+    {{ flavorText.flavor_text }}
+  </p>
+
+  <h3>Types</h3>
+  <ul *ngFor="let type of pokemon?.pokemon_v2_pokemontypes">
+    <li>
+      {{ type.pokemon_v2_type.name }}
+    </li>
+  </ul>
+
+  <h3>Data</h3>
+  <ul>
+    <li>Height: {{ pokemon.height }}</li>
+    <li>Weight: {{ pokemon.weight }}</li>
+  </ul>
+
+  <h3>Abilities</h3>
+
+  <div *ngIf="pokemon">
+    <app-stats-chart [pokemon]="pokemon"></app-stats-chart>
+  </div>
+
+  <h3>Type Weakness</h3>
+  <ul *ngFor="let weaknes of calcWeakType(pokemon)">
+    <li>
+      {{ weaknes }}
+    </li>
+  </ul>
+
+  <h3>Evolution Chain</h3>
+
+  <div
+    class="evolution-chain"
+    *ngFor="
+      let pokemonChain of pokemon?.pokemon_v2_pokemonspecy
+        ?.pokemon_v2_evolutionchain?.pokemon_v2_pokemonspecies
+    "
+  >
+    <app-pokemon-card-detail
+      [routerLink]="['/pokedex', pokemonChain.id]"
+      [pokemonSpecies]="pokemonChain"
+    ></app-pokemon-card-detail>
+  </div>
+</div>

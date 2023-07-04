@@ -1,0 +1,39 @@
+//This component re-uses the form layout and displays a generic card with a img and a table to show information 
+//remember to replace the data with the correct one, 
+//also you have to initialize the form in the component.ts and the notEditable variable as true
+
+<form> <!-- [formGroup]="nombre del form" -->
+    <div class="card-form">
+        <div class="img-card-container">
+            <!--Imagen que vamos a traer de la api-->
+            <img class="img-example"
+                src="https://previews.123rf.com/images/outchill/outchill1712/outchill171202982/91290228-ejemplo-de-texto-escrito-en-sello-vintage-de-goma-de-c%C3%ADrculo-simple-rojo.jpg"
+                alt="img-example">
+        </div>
+        <app-form-layout class="card-form-layout">
+            <div header class="card-title">
+                Titulo que vamos a traer con api
+            </div>
+            <div class="form-card-content">
+                <div class="form-card-info">
+                    <mat-label class="label-card" for="name">Name</mat-label>
+                    <input class="input-card" matInput placeholder="name" name="name" type="text"
+                        readonly="{{notEditable}}" formControlName="name">
+                </div>
+                <div class="form-card-info">
+                    <mat-label class="label-card" for="information">information</mat-label>
+                    <input class="input-card" matInput placeholder="information" name="information" type="text"
+                        readonly="{{notEditable}}" formControlName="information">
+                </div>
+                <div class="form-card-info">
+                    <mat-label class="label-card" for="description">description</mat-label>
+                    <textarea class="input-card text-area" matInput placeholder="description" name="description"
+                        type="text" readonly="{{notEditable}}" formControlName="description"></textarea>
+                </div>
+            </div>
+            <div footer class="card-footer">
+                <button class="card-button" mat-raised-button color="primary">button</button>
+            </div>
+        </app-form-layout>
+    </div>
+</form>

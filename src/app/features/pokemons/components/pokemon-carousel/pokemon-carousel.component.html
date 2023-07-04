@@ -1,0 +1,75 @@
+<div class="carousel-body">
+  <div class="gallery-wrapper">
+    <div class="gallery">
+      <app-pokemon-card
+        *ngFor="let pokemon of pokemons; let i = index"
+        [pokemon]="pokemon"
+        ngClass="gallery-wrapper--active: i === carouselIndex"
+      >
+      </app-pokemon-card>
+    </div>
+    <img
+      class="gallery-item__prev"
+      src="https://assets.pokemon.com/static2/_ui/img/lightbox/prev.png"
+      alt=""
+      (click)="prevPokemon()"
+    />
+    <img
+      class="gallery-item__next"
+      src="https://assets.pokemon.com/static2/_ui/img/lightbox/next.png"
+      alt=""
+      (click)="nextPokemon()"
+    />
+  </div>
+</div>
+
+<!-- <div class="carousel-body">
+  <div class="gallery-wrapper">
+    <ul class="gallery">
+      <li
+        *ngFor="let pokemon of pokemons; let i = index"
+        class="gallery-item"
+        class="gallery-wrapper--active: i === carouselIndex"
+      >
+        <a routerLink="/pokedex/{{ pokemon.id }}">
+          <img
+            class="gallery-item__pokemon"
+            [src]="pokemon.id | pokeImage"
+            alt="pokemon-img"
+        /></a>
+        <div class="gallery-item__main-info">
+          <div class="name-id">
+            <span class="gallery-item__name">{{ pokemon.name }} </span>
+            <span class="gallery-item__id">{{ pokemon.id }}</span>
+          </div>
+          <div class="type">
+            <span class="gallery-item__type">Type</span>
+            <span class="gallery-item__type">{{
+              pokemon.pokemon_v2_pokemontypes[0].pokemon_v2_type.name
+            }}</span>
+          </div>
+          <div class="ability">
+            <span class="gallery-item__ability">Ability</span>
+            <span class="gallery-item__ability">
+              {{
+                pokemon.pokemon_v2_pokemonabilities[0].pokemon_v2_ability.name
+              }}
+            </span>
+          </div>
+        </div>
+      </li>
+    </ul>
+    <img
+      class="gallery-item__prev"
+      src="https://assets.pokemon.com/static2/_ui/img/lightbox/prev.png"
+      alt=""
+      (click)="prevPokemon()"
+    />
+    <img
+      class="gallery-item__next"
+      src="https://assets.pokemon.com/static2/_ui/img/lightbox/next.png"
+      alt=""
+      (click)="nextPokemon()"
+    />
+  </div>
+</div> -->

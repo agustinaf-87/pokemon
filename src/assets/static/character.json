@@ -1,0 +1,39 @@
+{
+  "__typename": "pokemon_v2_pokemonspecies",
+  "id": 8,
+  "name": "wartortle",
+  "is_legendary": false,
+  "capture_rate": 45,
+  "gender_rate": 1,
+  "generation_id": 1,
+  "evolves_from_species_id": 7,
+  "pokemon_v2_evolutionchain": {
+    "__typename": "pokemon_v2_evolutionchain",
+    "pokemon_v2_pokemonspecies": [
+      {
+        "__typename": "pokemon_v2_pokemonspecies",
+        "id": 7,
+        "name": "squirtle",
+        "generation_id": 1
+      },
+      {
+        "__typename": "pokemon_v2_pokemonspecies",
+        "id": 8,
+        "name": "wartortle",
+        "generation_id": 1
+      },
+      {
+        "__typename": "pokemon_v2_pokemonspecies",
+        "id": 9,
+        "name": "blastoise",
+        "generation_id": 1
+      }
+    ]
+  },
+  "pokemon_v2_pokemonspeciesflavortexts": [
+    {
+      "__typename": "pokemon_v2_pokemonspeciesflavortext",
+      "flavor_text": "It cleverly controls its furry ears and tail to\nmaintain its balance while swimming."
+    }
+  ]
+}

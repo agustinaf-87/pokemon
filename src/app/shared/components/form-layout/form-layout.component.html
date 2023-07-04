@@ -1,0 +1,17 @@
+<mat-card class="layout-container">
+  <div class="header-form">
+    <mat-card-header>
+      <mat-card-title>
+        <ng-content select="[header]"></ng-content>
+      </mat-card-title>
+    </mat-card-header>
+  </div>
+  <div class="form-body-content">
+    <ng-content></ng-content>
+  </div>
+  <div>
+    <mat-card-footer>
+      <ng-content select="[footer]"></ng-content>
+    </mat-card-footer>
+  </div>
+</mat-card>

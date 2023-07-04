@@ -1,0 +1,54 @@
+<form *ngIf="parsedData" [formGroup]="form">
+  <div class="card-form">
+    <div class="img-card-container">
+      <img
+        class="img-example"
+        [src]="parsedData.id | pokeImage"
+        alt="img-example"
+      />
+    </div>
+    <app-form-layout class="card-form-layout">
+      <div header class="card-title">
+        {{ parsedData.name | uppercase }}
+      </div>
+      <div class="form-card-content">
+        <div class="form-card-info">
+          <mat-label class="label-card" for="name">Name</mat-label>
+          <input
+            class="input-card"
+            matInput
+            placeholder="name"
+            name="name"
+            type="text"
+            readonly="{{ notEditable }}"
+            formControlName="name"
+          />
+        </div>
+        <div class="form-card-info">
+          <mat-label class="label-card" for="id">ID</mat-label>
+          <input
+            class="input-card"
+            matInput
+            placeholder="ID"
+            name="id"
+            type="number"
+            readonly="{{ notEditable }}"
+            formControlName="id"
+          />
+        </div>
+        <div class="form-card-info">
+          <mat-label class="label-card" for="types">Types</mat-label>
+          <input
+            class="input-card"
+            matInput
+            placeholder="Types"
+            name="types"
+            type="text"
+            readonly="{{ notEditable }}"
+            formControlName="types"
+          />
+        </div>
+      </div>
+    </app-form-layout>
+  </div>
+</form>

@@ -1,0 +1,24 @@
+<div class="login-content">
+  <h3 class="login-title">Formulario de Login</h3>
+  <form class="form-login" [formGroup]="loginForm" (ngSubmit)="login()">
+    <div class="form-content">
+      <label class="label-login" for="username">Nombre</label>
+      <input
+        class="input-login"
+        formControlName="username"
+        id="username"
+        type="text"
+      />
+      <label class="label-login" for="password">Contraseña</label>
+      <input
+        class="input-login"
+        formControlName="password"
+        id="password"
+        type="password"
+      />
+    </div>
+    <div class="login-content-button">
+      <button type="submit" class="button-login">Login</button>
+    </div>
+  </form>
+</div>

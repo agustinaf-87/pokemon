@@ -1,0 +1,8 @@
+.nav-container {
+  display: flex;
+  flex-flow: column nowrap;
+}
+
+.content-container {
+  min-height: calc(100vh - 137px);
+}

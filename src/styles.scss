@@ -1,0 +1,42 @@
+/*Bootstrap*/
+
+@import "./styles/bootrstap.scss";
+
+@import 'ngx-toastr/toastr';
+
+html,
+body {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+* {
+  box-sizing: border-box;
+}
+
+ul {
+  list-style-type: none;
+}
+
+body {
+  margin: 0;
+}
+
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+.red-snackbar {
+  background-color: #f44336;
+  color: white;
+}
+.red-snackbar button {
+  background-color: #f44336;
+  color: white !important;
+  border: none;
+}

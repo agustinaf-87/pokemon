@@ -1,0 +1,32 @@
+
+Get Call To Api:
+
+getFilteredComics(
+    filter?: IComicQueryParams
+  ): Observable<IPagination<IComic>> {
+    return this.http
+      .get<IDataWrapper<IComic>>(`${environment.URL_API}/comics`, {
+        params: { ...(filter as any) },
+      })
+      .pipe(map((data: IDataWrapper<IComic>) => data.data));
+  }
+
+///Filter out some data. Using helper function to add a pipe to an Observable.
+    private filterOutBrokenComic(
+    observable: Observable<IDataWrapper<IComic>>
+  ): Observable<IPagination<IComic>> {
+    return observable.pipe(
+      map((data: IDataWrapper<IComic>) => {
+        const validFilteredComics: IComic[] = [];
+
+        data.data.results.forEach((comic) => {
+          if (this.validComic(comic)) validFilteredComics.push(comic);
+        });
+        data.data.count = validFilteredComics.length;
+        data.data.results = validFilteredComics;
+
+        return data.data;
+      })
+    );
+  }
+

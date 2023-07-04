@@ -1,0 +1,108 @@
+.img-example{
+    height: 20vw;
+    padding: 1em;
+  }
+
+ .card-form{
+    display: flex;
+    flex-wrap: row;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 4em 0;
+ }
+
+.img-card-container{
+    padding: 1em;
+}
+
+ .card-title{
+    color: whitesmoke;
+    font-size: 1em;
+    padding: 1em;
+  }
+
+.form-card-content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 2em;
+    height: 30vh;
+}
+
+.form-card-info{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 0;
+}
+
+.label-card{
+    font-size: 1.2em;
+    color: whitesmoke;
+    padding: 0.5em 0;
+}
+
+.input-card{
+    background-color: #424242;
+    font-size: 1.2em;   
+    height: 2em;
+    outline: none;
+    border: none;
+}
+
+.text-area{
+    overflow: hidden;
+    resize: none;
+    border: none;
+    width:  300px;
+    height: 80px;
+    padding: 10px 0;
+}
+
+.card-footer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1em;
+}
+
+.card-button{
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 1.2em;   
+    height: 2em;
+    outline: none;
+    background: whitesmoke;
+    color: black;
+    cursor: pointer;
+}
+
+@media only screen and (max-width: 600px) {
+    .card-form {
+      flex-direction: column;
+      align-items: center;
+
+    }
+  
+    .img-card-container {
+      width: 50vw;
+      padding: 0;
+    }
+  
+    .img-example {
+      height: auto;
+      width: 50vw;
+      max-width: 400px;
+    }
+  
+    .form-card-content {
+      height: auto;
+      padding: 1em;
+      margin-top: 1em;
+      width: 50vw;
+      max-width: 400px;
+    }
+  }

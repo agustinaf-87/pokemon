@@ -1,0 +1,23 @@
+<h2>Pokémon</h2>
+<div
+  class="pokemon-container"
+  infiniteScroll
+  [infiniteScrollDistance]="2"
+  [infiniteScrollUpDistance]="1.5"
+  [scrollWindow]="true"
+  [infiniteScrollThrottle]="50"
+  (scrolled)="loadMorePokemon()"
+  (scrolledUp)="loadLessPokemon()"
+>
+  <ng-container *ngFor="let pokemon of pokeList">
+    <app-pokemon-card-detail
+      [pokemonList]="pokemon"
+      routerLink="/pokedex/{{ pokemon.id }}"
+    >
+      <span>{{ pokemon.id }}</span> {{ pokemon.name }}
+    </app-pokemon-card-detail>
+  </ng-container>
+</div>
+<!-- <button mat-raised-button color="accent" (click)="loadMorePokemon()">
+  Load More- {{ (pokemon$ | async)?.length }}
+</button> -->

@@ -1,0 +1,63 @@
+<div class="featured-characters">
+  <h2>Featured Characters</h2>
+</div>
+<div class="character-spotlight">
+  <h2>Character Spotlight</h2>
+</div>
+
+<ng-container *ngIf="suggestions$ | async as charList">
+  <div class="character-table">
+    <div class="character-table-menu">
+      <div>
+        <form class="example-form">
+          <mat-form-field class="example-full-width" appearance="fill">
+            <mat-label>Name</mat-label>
+            <input
+              type="text"
+              placeholder="Pick one"
+              aria-label="Number"
+              matInput
+              [formControl]="nameStartsWith"
+              [matAutocomplete]="auto"
+            />
+            <mat-autocomplete
+              #auto="matAutocomplete"
+              (optionSelected)="search($event)"
+            >
+              <mat-option
+                *ngFor="let option of suggestions$ | async"
+                [value]="option.name"
+              >
+                {{ option.name }}
+              </mat-option>
+            </mat-autocomplete>
+          </mat-form-field>
+        </form>
+
+        <div>
+          <mat-form-field appearance="outline">
+            <mat-select (selectionChange)="orderChange($event)">
+              <mat-option *ngFor="let item of options" [value]="item.value">{{
+                item.label
+              }}</mat-option>
+            </mat-select>
+          </mat-form-field>
+        </div>
+      </div>
+    </div>
+    <div class="character-container">
+      <ng-container *ngFor="let character of charList">
+        <app-card-detail
+          [routerLink]="['./detail', character.id]"
+          [character]="character"
+        ></app-card-detail
+      ></ng-container>
+    </div>
+  </div>
+</ng-container>
+
+<mat-paginator
+  [length]="currentQueryResult.total"
+  (page)="onPageChange($event)"
+  [pageSize]="limit"
+></mat-paginator>

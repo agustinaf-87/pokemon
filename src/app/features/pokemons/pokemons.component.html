@@ -1,0 +1,73 @@
+<div class="news-content" *ngIf="userRole() !== roleEnum.Developer">
+  <mat-card class="principal-news">
+    <img
+      class="img-principal"
+      src="../../../assets/images/img-pokemons/scarlet-violet.png"
+    />
+    <mat-card-title class="principal-title-news"
+      >Inteleon llega como un soplo de aire fresco a las
+      teraincursiones</mat-card-title
+    >
+    <mat-card-subtitle class="subtitle-news">
+      No dejes pasar la oportunidad de hacerte con estos Pokémon Paradoja en
+      Pokémon Escarlata y Pokémon Púrpura</mat-card-subtitle
+    >
+  </mat-card>
+  <div>
+    <mat-card class="second-new">
+      <img
+        class="img-second"
+        src="../../../assets/images/img-pokemons/sv01-triple-play.png"
+        alt=""
+      />
+      <mat-card-subtitle class="card-title"
+        >Triple jugada de Escarlata y Púrpura: Dondozo, Arcanine ex y Oinkologne
+        ex</mat-card-subtitle
+      >
+    </mat-card>
+  </div>
+  <div>
+    <mat-card class="third-new">
+      <img
+        class="img-second"
+        src="../../../assets/images/img-pokemons/pokemon-unite.png"
+        alt=""
+      />
+      <mat-card-subtitle class="card-title"
+        >Chandelure llega a Pokémon UNITE</mat-card-subtitle
+      >
+    </mat-card>
+  </div>
+
+  <div>
+    <mat-card class="fourth-new">
+      <img
+        src="../../../assets/images/img-pokemons/pokemon-masters.png"
+        alt=""
+      />
+      <mat-card-subtitle class="card-title"
+        >Investiga a la Fundación Aether con Tilo (Traje S) y Tapu
+        Koko</mat-card-subtitle
+      >
+    </mat-card>
+  </div>
+  <div>
+    <mat-card class="fifth-new">
+      <div>
+        <img
+          src="../../../assets/images/img-pokemons/global-challenge.png"
+          alt=""
+        />
+      </div>
+      <mat-card-subtitle class="card-title"
+        >Prepárate para darlo todo en el Desafío Global III de
+        2023</mat-card-subtitle
+      >
+    </mat-card>
+  </div>
+  <div></div>
+</div>
+<div class="row">
+  <h1>Pokémons Destacados</h1>
+  <app-pokemon-carousel [pokemons]="pokemons"></app-pokemon-carousel>
+</div>

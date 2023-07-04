@@ -1,0 +1,37 @@
+//This component re-uses the form layout to create a login form
+//remember to initialize the formGroup in the component.ts, and to uncomment the errors.
+//you should change the data in order to adapt it with the data required for the exam
+
+<form class="login-form">
+    <app-form-layout>
+        <div header class="login-title">
+            Login
+        </div>
+        <div class="form-content">
+            <div class="content-info">
+                <mat-label class="label-login" for="username">Name</mat-label>
+                <input class="input-login" matInput placeholder="Username" name="username" type="text"
+                    formControlName="username">
+                <!-- <mat-error *ngIf="loginForm.get('username')?.hasError('required')">Username is required</mat-error>  -->
+            </div>
+            <div class="content-info">
+                <mat-label class="label-login" for="password1">Password 1</mat-label>
+                <input class="input-login" matInput placeholder="password1" name="password1" type="text"
+                    formControlName="password1">
+                <!-- <mat-error *ngIf="loginForm.get('password1')?.hasError('required')">
+                Please enter a password.
+              </mat-error> -->
+            </div>
+            <div class="content-info">
+                <mat-label class="label-login" for="password2">Password 2</mat-label>
+                <input class="input-login" matInput placeholder="password2" name="password2" type="text"
+                    formControlName="password2">
+            </div>
+        </div>
+        <div footer>
+            <div class="login-footer">
+                <button class="login-button" type="submit" mat-raised-button color="primary">Login</button>
+            </div>
+        </div>
+    </app-form-layout>
+</form>
