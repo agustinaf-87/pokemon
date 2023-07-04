@@ -6,7 +6,7 @@ import { SharedModule } from "../shared/shared.module";
 import { SpinnerComponent } from "./components/spinner/spinner.component";
 import { LoginComponent } from "./components/login/login.component";
 import { FormsModule, ReactiveFormsModule } from "@angular/forms";
-import { LandingPageComponent } from "../landing-page/landing-page.component";
+import { LandingPageComponent } from "../core/pages/landing-page/landing-page.component";
 import { CoreRoutingModule } from "./core-routing.module";
 
 @NgModule({

@@ -1,28 +1,49 @@
-.login-content{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin-top: 2em;
+.login-content {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-top: 3em;
+}
+
+.login-content::before{
+  content: "";
+  position: absolute;
+  width: 50vw;
+  height: 50vh;
+  margin: auto;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url(../../../../assets/images/HD-wallpaper-pokeboll-cartoon-pokebola-pokemon.jpg);
+  background-size: auto;
+  opacity: 0.3;
+  z-index: -1;
+  border-radius: 5px;
 }
 
 .login-title{
     font-size: 2rem;
-    font-weight: 700;
+    font-weight: bold;
     margin-bottom: 1rem;
     padding: 20px;
+    color: red;
 }
-.login-form{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
+
+
 
 .form-content{
     border: 1px solid black;
     padding: 20px;
     border-radius: 5px;
+    max-width: 30vw;
+}
+
+.label-login{
+  color: black;
+  font-weight: bold;
 }
 
 .input-login{
@@ -34,14 +55,14 @@
 }
 
 .button-login{
-    // width: 100%;
     margin-bottom: 1rem;
     padding: 10px;
     border-radius: 5px;
     border: 1px solid #ccc;
-    background-color: #ccc;
+    background-color: red;
     cursor: pointer;
-  justify-self: center ;
+    justify-self: center ;
+    font-weight: bold;
 }
 .login-content-button{
     padding: 10px;
@@ -50,3 +71,5 @@
     justify-content: center;
     align-items: center;
 }
+
+
