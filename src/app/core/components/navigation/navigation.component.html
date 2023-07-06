@@ -55,7 +55,7 @@
         <img src="../../../../assets/icons/pokedex.svg" alt="" />
         <a routerLink="/pokedex">Pokédex</a>
       </li>
-      <li class="logout-container">
+      <li class="logout-container" *ngIf="this.authService.isLoggedIn()">
         <img src="../../../../assets/icons/log-out.svg" />
         <a class="link-logout" (click)="this.authService.logout()">
           Cerrar Sesión
