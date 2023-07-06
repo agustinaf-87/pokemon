@@ -24,7 +24,6 @@ export class PokemonCardDetailComponent implements OnInit {
   notEditable = true;
   @Input() pokemonList?: PokemonList;
   @Input() pokemonSpecies?: PokemonSpecies;
-  //Agus types
 
   parsedData!: PokemonParsed;
 
