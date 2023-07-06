@@ -1,5 +1,5 @@
 import { Component, OnInit } from "@angular/core";
-import { Observable, map } from "rxjs";
+import { map } from "rxjs";
 import { IPokemon } from "src/app/core/models/pokemon.interface";
 import { Role } from "../../core/enums/role.enum";
 import { AuthService } from "../../core/services/auth-service/auth.service";
@@ -11,7 +11,6 @@ import { PokemonService } from "./services/pokemon.service";
   styleUrls: ["./pokemons.component.scss"],
 })
 export class PokemonsComponent implements OnInit {
-  // pokemons$!: Observable<IPokemon[]>;
   pokemons: IPokemon[] = [];
 
   roleEnum = Role;

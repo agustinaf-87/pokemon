@@ -2,8 +2,6 @@ import { CommonModule } from "@angular/common";
 import { HttpClient } from "@angular/common/http";
 import { NgModule } from "@angular/core";
 import { MatFormFieldModule } from "@angular/material/form-field";
-import { TranslateModule, TranslateLoader } from "@ngx-translate/core";
-import { HttpLoaderFactory } from "../app.module";
 import { PokeImagePipe } from "./pipes/poke-image.pipe";
 import { FormsModule, ReactiveFormsModule } from "@angular/forms";
 import { PokemonCardDetailComponent } from "./components/pokemon-card-detail/pokemon-card-detail.component";
@@ -24,22 +22,9 @@ const MATERIAL_MODULES = [
     PokemonCardDetailComponent,
     FormLayoutComponent,
   ],
-  imports: [
-    CommonModule,
-    MATERIAL_MODULES,
-    FormsModule,
-    ReactiveFormsModule,
-    TranslateModule.forChild({
-      loader: {
-        provide: TranslateLoader,
-        useFactory: HttpLoaderFactory,
-        deps: [HttpClient],
-      },
-    }),
-  ],
+  imports: [CommonModule, MATERIAL_MODULES, FormsModule, ReactiveFormsModule],
   exports: [
     MATERIAL_MODULES,
-    TranslateModule,
     PokeImagePipe,
     PokemonCardDetailComponent,
     FormLayoutComponent,
