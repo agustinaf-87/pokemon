@@ -7,15 +7,11 @@
         alt="img-example"
       />
     </div>
-    <app-form-layout class="card-form-layout">
-      <div header class="card-title">
-        {{ parsedData.name | uppercase }}
-      </div>
+    <div class="card-form-layout">
       <div class="form-card-content">
         <div class="form-card-info">
-          <mat-label class="label-card" for="name">Name</mat-label>
           <input
-            class="input-card"
+            class="input-card-name"
             matInput
             placeholder="name"
             name="name"
@@ -25,7 +21,6 @@
           />
         </div>
         <div class="form-card-info">
-          <mat-label class="label-card" for="id">ID</mat-label>
           <input
             class="input-card"
             matInput
@@ -37,7 +32,6 @@
           />
         </div>
         <div class="form-card-info">
-          <mat-label class="label-card" for="types">Types</mat-label>
           <input
             class="input-card"
             matInput
@@ -49,6 +43,6 @@
           />
         </div>
       </div>
-    </app-form-layout>
+    </div>
   </div>
 </form>

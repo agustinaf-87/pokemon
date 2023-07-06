@@ -1,22 +1,23 @@
-import { ComponentFixture, TestBed } from "@angular/core/testing";
+import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { FormLayoutComponent } from "./form-layout.component";
+import { FormLayoutComponent } from './form-layout.component';
 
-describe("FormLayoutComponent", () => {
+describe('FormLayoutComponent', () => {
   let component: FormLayoutComponent;
   let fixture: ComponentFixture<FormLayoutComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [FormLayoutComponent],
-    }).compileComponents();
+      declarations: [ FormLayoutComponent ]
+    })
+    .compileComponents();
 
     fixture = TestBed.createComponent(FormLayoutComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
 
-  it("should create", () => {
+  it('should create', () => {
     expect(component).toBeTruthy();
   });
 });
