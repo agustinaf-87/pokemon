@@ -18,7 +18,7 @@
 }
 
 .gallery-wrapper {
-  width: 475px;
+  width: 350px;
   display: flex;
   position: relative;
 }
@@ -84,6 +84,10 @@ height: 7vh;
   .arrow2{
     right:-40%;
   }
+
+  .gallery-wrapper{
+    width: 350px;
+  }
 }
 
 @media screen and (max-width: 800px){
@@ -93,6 +97,10 @@ height: 7vh;
 
   .arrow2{
     right:0%;
+  }
+
+  .gallery-wrapper{
+    width: 300px;
   }
 }
 

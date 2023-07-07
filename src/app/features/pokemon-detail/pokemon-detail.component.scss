@@ -155,4 +155,67 @@ a{
     align-items: center;
 
   }
+
+  @media only screen and (max-width: 768px){
+   .abilities-pokemon{
+   width: 70vw;
+   padding: 0;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+  justify-content: center;
+  margin: auto;
 }
+.chart-pokemon{
+  width: 70vw;
+  padding: 3em;
+}
+
+.abilities-title{
+  align-items: center;
+  justify-content: center;
+}
+.first-container-detail{
+  padding-left: 0;
+}
+
+.poke-img{
+  width: 60vw;
+}
+  }
+
+  .data-pokemons{
+    width: 40vw;
+    padding: 1em;
+  }
+
+  .text-description{
+    width: 40vw;
+    padding: 1em;
+  }
+  .container-evolution-chain{
+    width: 80vw;
+  }
+}
+
+@media only screen and (max-width: 390px){
+  .first-container-detail{
+    width: 80vw;
+    padding-left:0;
+  }
+.abilities-pokemon{
+   width: 80vw;
+   padding: 0;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+  justify-content: center;
+  margin: auto;
+}
+.chart-pokemon{
+  width: 100vw;
+  padding: 3em;
+}
+}
+
+
