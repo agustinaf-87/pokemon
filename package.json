@@ -1,11 +1,11 @@
 {
   "name": "exam2-template",
   "author": {
-    "email": "gabydll95@gmail.com",
-    "name": "Gabriel Denis Llanes"
+    "email": "fernandez.agustinaelena@gmail.com",
+    "name": "Agustina ELena Fernández"
   },
   "repository": {
-    "url": "https://github.com/gdenis/MarvelExam.git",
+    "url": "https://github.com/agustinaf-87/pokemon",
     "type": "Angular project template"
   },
   "license": "MIT",
@@ -39,17 +39,17 @@
     "@angular/platform-browser-dynamic": "^15.2.0",
     "@angular/router": "^15.2.0",
     "@apollo/client": "^3.0.0",
-    "@ngx-translate/core": "^14.0.0",
-    "@ngx-translate/http-loader": "^7.0.0",
     "apollo-angular": "^4.2.1",
     "bootstrap": "^5.2.3",
     "chart.js": "^4.3.0",
     "eslint-config-prettier": "^8.8.0",
+    "flag": "^5.0.1",
     "graphql": "^16",
     "jwt-decode": "^3.1.2",
     "ngx-infinite-scroll": "^15.0.0",
     "ngx-toastr": "^16.1.1",
     "primeflex": "^3.3.0",
+    "primeng": "^15.3.0",
     "rxjs": "~7.8.0",
     "tslib": "^2.3.0",
     "zone.js": "~0.12.0"
