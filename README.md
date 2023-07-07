@@ -16,7 +16,7 @@
     <a href="https://github.com/agustinaf-87/pokemon"><strong>Explore the project »</strong></a>
     <br />
     <br />
-    <a href="">View Demo</a>
+    <a href="https://pokemon-phi-two.vercel.app/">View Demo</a>
   </p>
 </div>
 
@@ -46,7 +46,10 @@
 
 <!-- ABOUT THE PROJECT -->
 ## About The Project
-<img src="src/assets/images/marvel-responsive.JPG">
+<img src="src/assets/images/Captura_1.JPG">
+<img src="src/assets/images/Captura_2.JPG">
+<img src="src/assets/images/Captura_3.JPG">
+
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -116,7 +119,7 @@ This project was designed to simulate a Pokemon App, working with the Poke Api a
 ## More about the exam:
 * To get the project structure please go to: [Documentation](https://agustinaf-87.github.io/gist-repo/)
 * For the issues structure I used github projects.
-* For the deploy I used vercel . I have used 2 differents domains to work with different environments: production and development. 
+* For the deploy I used vercel: https://pokemon-phi-two.vercel.app/ 
 * Pre-commit hook: I used a pre-commit hook to prevent unnecesary commits in the master branch that could cause problems later on. 
 * Interceptors: are used on the web to handle any kind of error.
 * Guards: interfaces provided by Angular which, when implemented, allow us to control the accessibility of a route based on conditions provided in class implementation of that interface.    
@@ -136,7 +139,7 @@ Agustina Elena Fernández
 
 fernandez.agustinaelena@gmail.com
 
-Project Link: [https://github.com/agustinaf-87/marvelapp](https://github.com/github_username/repo_name)
+Project Link: [https://github.com/agustinaf-87/pokemon](https://github.com/github_username/repo_name)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 

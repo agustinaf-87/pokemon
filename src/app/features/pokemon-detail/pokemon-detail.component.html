@@ -9,7 +9,7 @@
       </div>
       <div class="abilities-pokemon">
         <h3 class="abilities-title">Puntos de base</h3>
-        <div *ngIf="pokemon" class="">
+        <div *ngIf="pokemon" class="chart-pokemon">
           <app-stats-chart [pokemon]="pokemon"></app-stats-chart>
         </div>
       </div>
@@ -65,6 +65,7 @@
         "
       >
         <app-pokemon-card-detail
+          class="evolution-card"
           [routerLink]="['/pokedex', pokemonChain.id]"
           [pokemonSpecies]="pokemonChain"
         ></app-pokemon-card-detail>
